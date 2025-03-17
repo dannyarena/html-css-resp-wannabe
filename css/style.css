@@ -136,4 +136,6 @@ img {
         padding: 0 15px;
     }
 
-    
+    .row {
+        flex-direction: column;
+    }
