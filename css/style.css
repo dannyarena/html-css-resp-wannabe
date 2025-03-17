@@ -152,3 +152,7 @@ img {
     .steps .col img {
         height: auto;
     }
+
+    .why-us img {
+        margin-bottom: 2rem;
+    }
