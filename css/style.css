@@ -137,5 +137,18 @@ img {
     }
 
     .row {
-        flex-direction: column;
+        
+    }
+
+    .lessons .col,
+    .steps .col,
+    .why-us .col-left,
+    .why-us .col-right {
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    .lessons .col img,
+    .steps .col img {
+        height: auto;
     }
