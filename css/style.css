@@ -128,15 +128,15 @@ img {
     SOLUZIONE RESPONSIVE
  ************************************************/
 /* MEDIA QUERIES PER TABLET (massimo 768px) */
+@media (max-width: 768px) {
 
-@media (max-width: 768px)
-
+    /* Il container viene adattato alla larghezza dello schermo per evitare scrolling orizzontale */
     .container {
         width: 100%;
         padding: 0 15px;
     }
 
-
+    /* Adatto tutte le colonne della pagina per occupare il 100% della larghezza per una migliore leggibilità */
     .lessons .col,
     .steps .col,
     .why-us .col-left,
@@ -145,25 +145,34 @@ img {
         padding: 1rem 0;
     }
 
+    /* Le immagini si adattano automaticamente alla larghezza disponibile mantenendo proporzioni */
     .lessons .col img,
-    .steps .col img {
+    .steps .col img,
+    .why-us img {
         height: auto;
     }
 
+    /* Aggiungo spazio sotto l'immagine per separarla chiaramente dai contenuti successivi */
     .why-us img {
         margin-bottom: 2rem;
     }
 
-}
-
-    /* MEDIA QUERIES PER MOBILE (massimo 480px) */
-
-@media (max-width: 480px) 
-
-    .row {
+    /* Imposto le colonne della sezione Steps in verticale da tablet per ottimizzare la lettura */
+    .steps .row,
+    .why-us .row {
         flex-direction: column;
     }
-    
+}
+
+/* MEDIA QUERIES PER MOBILE (massimo 480px) */
+@media (max-width: 480px) {
+
+    /* Imposto anche le colonne della sezione Lessons in verticale da mobile per una lettura più facile e chiara */
+    .lessons .row {
+        flex-direction: column;
+    }
+
+    /* Ridimensiono i titoli per adattarli agli schermi piccoli, migliorando leggibilità ed equilibrio grafico */
     h1 {
         font-size: 2rem;
     }
@@ -175,18 +184,19 @@ img {
     h3 {
         font-size: 1.25rem;
     }
-   
 
+    /* Riduzione del padding delle card e delle liste per ottimizzare lo spazio disponibile su schermi piccoli */
     .lessons .card,
     .steps .card,
     .why-us .col-right ul li {
         padding: 0.5rem;
     }
 
+    /* Margini e padding verticali ridotti per limitare lo scrolling eccessivo e dare un aspetto più compatto */
     .steps,
     .lessons,
     .why-us {
         margin: 1.5rem 0;
         padding: 1.5rem 0;
     }
-
+}
